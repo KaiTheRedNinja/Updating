@@ -2,10 +2,10 @@ import XCTest
 @testable import UpdatedSwiftUI
 
 final class UpdatedSwiftUITests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(UpdatedSwiftUI().text, "Hello, World!")
+    func testUpdating() throws {
+        var testString: String = "initial"
+        let updating = Updating(wrappedValue: testString)
+        testString = "changed!"
+        XCTAssertEqual(testString, updating.wrappedValue)
     }
 }
