@@ -31,7 +31,7 @@ When TextEditingView initializes MyText, it passes an `Updating` of its state pr
 Whenever the user changes the text, MyText updates its `string` state. This differs from state, as state only takes the
 initial value and any updates done in the parent view would not be reflected in the child view.
 
-## Usage
+## Adding to a project
 Using Swift Package Manager: `File -> Add Packages`, then input the URL of this github repo
 
 ## Implementation Details
@@ -46,3 +46,6 @@ let updating = Updating(wrappedValue: testString)
 testString = "changed!"
 print(updating.wrappedValue) // "changed!"
 ```
+
+## Custom prefix operator
+Instead of using `self._myValue = Updating(wrappedValue: myValue)`, you can use `self._myValue = <-myValue`
