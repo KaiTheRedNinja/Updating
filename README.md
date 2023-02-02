@@ -1,6 +1,6 @@
-# UpdatedSwiftUI
+# Updating
 
-`Updated` is a property wrapper that reads and stays updated to a value owned by a source of truth.
+`Updating` is a property wrapper that reads and stays updated to a value owned by a source of truth.
 
 Use a `Updating` to create a one-way connection between a property that stores data, and a view that displays the data.
 An `Updating` connects a property to a source of truth stored elsewhere, instead of storing data directly, similar to `Binding`.
@@ -30,6 +30,9 @@ struct TextEditingView: View {
 When TextEditingView initializes MyText, it passes an `Updating` of its state property into the button’s `Updating` property.
 Whenever the user changes the text, MyText updates its `string` state. This differs from state, as state only takes the
 initial value and any updates done in the parent view would not be reflected in the child view.
+
+## Usage
+Using Swift Package Manager: `File -> Add Packages`, then input the URL of this github repo
 
 ## Implementation Details
 Updating turns its `Value` into an `autoclosure` for `() -> Value`. In SwiftUI, whenever a value in a closure changes,
