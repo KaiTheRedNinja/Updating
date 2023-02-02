@@ -4,7 +4,7 @@ import XCTest
 final class UpdatedSwiftUITests: XCTestCase {
     func testUpdating() throws {
         var testString: String = "initial"
-        let updating = Updating(wrappedValue: testString)
+        let updating = <-testString
         testString = "changed!"
         XCTAssertEqual(testString, updating.wrappedValue)
     }

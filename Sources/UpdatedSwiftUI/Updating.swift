@@ -54,3 +54,7 @@ public struct Updating<Value>: DynamicProperty {
     }
 }
 
+prefix operator <-
+public prefix func <- <Value>(value: @escaping @autoclosure () -> Value) -> Updating<Value> {
+    .init(wrappedValue: value())
+}
