@@ -1,5 +1,5 @@
 import XCTest
-@testable import Updated
+@testable import Updating
 
 final class UpdatedSwiftUITests: XCTestCase {
     func testUpdating() throws {
